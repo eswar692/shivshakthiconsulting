@@ -8,7 +8,6 @@ import {
   Sparkles,
 } from "lucide-react";
 import { motion } from "framer-motion";
-import Testimonials from "../Genaral/Testimonial";
 import FAQ from "../Genaral/FAQ";
 import {
   company_name,

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ChevronDown, ChevronUp, MessageCircle } from "lucide-react";
+import { ChevronDown, ChevronUp } from "lucide-react";
 import { person_name, phone_number } from "./secrete";
 
 const faqs = [
