@@ -5,7 +5,7 @@ import { company_name, phone_number, whatsapp_number } from "./secrete";
 
 const Header = () => {
   return (
-    <header className="w-full bg-gradient-to-r from-indigo-950 via-purple-950 to-fuchsia-950 border-b border-white/10">
+    <header className="w-full bg-gradient-to-r from-purple-950 via-fuchsia-950 to-black border-b border-white/20">
       <div className="w-full md:w-[90%] mx-auto">
         <Logo />
       </div>
@@ -40,7 +40,7 @@ const Logo = () => (
           border border-yellow-400 shadow-lg"
         >
           <img
-            src="https://i.pinimg.com/1200x/28/9c/2e/289c2e010fbf9b1e4cba8bab99aa9ed1.jpg"
+            src="https://i.pinimg.com/736x/7d/aa/03/7daa0365c9355bc4a08f35045bb7235e.jpg"
             alt="Company Logo"
             className="w-full h-full object-cover hover:scale-110 transition duration-500"
           />
@@ -56,18 +56,20 @@ const Logo = () => (
           </h1>
 
           <p className="text-xs md:text-sm text-yellow-300 italic">
-            Since 1950
+            Since 1976
           </p>
 
-          <p className="text-xs md:text-sm text-gray-200 mt-2 leading-relaxed max-w-[360px]">
-            <b>No. 34, 7th Cross, Vijay Nagar</b>, 98/3 DC Road,
+          <p className="text-sm md:text-sm text-gray-200 mt-2 leading-relaxed max-w-[360px]">
+            <b>02, Vijay complex, shivapura, 4th cross,</b>
             <br />
-            Kuttiyappa Garden, Bilekahalli,
+            ramalayam street,
             <br />
-            Bengaluru – 560076, Karnataka
+            Baragur Hassan ,573225
+            <br />
+            Karnataka
             <br />
             <span className="text-yellow-400 font-semibold">
-              📞 +91 91102 22675
+              📞 +91 {phone_number}
             </span>
           </p>
         </div>

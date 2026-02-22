@@ -40,37 +40,41 @@ export default function FAQ() {
   };
 
   return (
-    <section className="relative py-24 px-6 bg-gradient-to-br from-purple-900 via-indigo-900 to-black text-white overflow-hidden">
-      {/* Glow Orbs Background */}
-      <div className="absolute top-10 left-10 w-64 h-64 bg-purple-500/30 rounded-full blur-3xl animate-pulse"></div>
-      <div className="absolute bottom-10 right-10 w-72 h-72 bg-pink-500/20 rounded-full blur-3xl animate-ping"></div>
+    <section className="relative py-24 px-6 bg-gradient-to-b from-black via-zinc-950 to-neutral-950 text-white overflow-hidden">
+      {/* Heavy Background Accents */}
+      <div className="absolute -top-40 -left-40 w-[500px] h-[500px] bg-red-900/30 blur-[140px]"></div>
+      <div className="absolute -bottom-40 -right-40 w-[500px] h-[500px] bg-purple-900/30 blur-[140px]"></div>
 
       <div className="relative max-w-5xl mx-auto">
         {/* Heading */}
-        <h2 className="text-4xl md:text-6xl font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-red-400 to-yellow-300 drop-shadow-lg">
-          ❓ Frequently Asked Questions
-        </h2>
-        <p className="text-center text-gray-300 mt-4 text-lg">
-          Quick answers to help you understand our astrology services better.
-        </p>
+        <div className="text-center mb-14">
+          <h2 className="text-4xl md:text-5xl font-black font-poppins tracking-wide text-white">
+            Frequently Asked Questions
+          </h2>
+          <div className="w-28 h-[3px] bg-gradient-to-r from-red-700 to-purple-700 mx-auto mt-5"></div>
+          <p className="text-gray-400 mt-6 text-lg font-inter max-w-2xl mx-auto">
+            Clear answers about our professional guidance approach, process, and
+            expectations.
+          </p>
+        </div>
 
         {/* FAQ List */}
-        <div className="mt-16 space-y-6">
+        <div className="space-y-6">
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="group rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 shadow-xl overflow-hidden transition-all hover:scale-[1.02] shadow-pink-500/30"
+              className="bg-gradient-to-b from-zinc-900 to-black border border-white/10 shadow-xl overflow-hidden transition-all"
             >
               {/* Question */}
               <button
                 onClick={() => toggleFAQ(index)}
-                className="w-full flex justify-between items-center px-6 py-5 text-left text-xl font-semibold text-white transition-all group-hover:text-pink-400"
+                className="w-full flex justify-between items-center px-6 py-5 text-left text-lg md:text-xl font-semibold font-inter text-white hover:text-red-400 transition-colors"
               >
                 {faq.question}
                 {openIndex === index ? (
-                  <ChevronUp className="w-6 h-6 text-pink-400" />
+                  <ChevronUp className="w-6 h-6 text-red-500" />
                 ) : (
-                  <ChevronDown className="w-6 h-6 text-pink-400" />
+                  <ChevronDown className="w-6 h-6 text-red-500" />
                 )}
               </button>
 
@@ -78,11 +82,11 @@ export default function FAQ() {
               <div
                 className={`overflow-hidden transition-all duration-500 ease-in-out ${
                   openIndex === index
-                    ? "max-h-40 opacity-100"
+                    ? "max-h-48 opacity-100"
                     : "max-h-0 opacity-0"
                 }`}
               >
-                <div className="px-6 pb-6 text-gray-200 leading-relaxed">
+                <div className="px-6 pb-6 text-gray-300 leading-relaxed font-inter">
                   {faq.answer}
                 </div>
               </div>
@@ -90,12 +94,11 @@ export default function FAQ() {
           ))}
         </div>
 
-        {/* CTA Button */}
-        <div className="mt-14 flex justify-center">
+        {/* CTA */}
+        <div className="mt-16 flex justify-center">
           <a href={`https://wa.me/${phone_number}`} target="_blank">
-            <button className="flex items-center gap-3 bg-gradient-to-r from-pink-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-full shadow-lg hover:scale-105 hover:shadow-pink-400/50 transition-all duration-300">
-              <MessageCircle className="w-6 h-6" />
-              Chat With Astrologer
+            <button className="bg-green-800 hover:bg-green-900 text-white font-semibold tracking-wide px-8 py-4 shadow-xl transition-all duration-300">
+              CHAT WITH US
             </button>
           </a>
         </div>

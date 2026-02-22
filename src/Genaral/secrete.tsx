@@ -1,10 +1,10 @@
-const phone_number = "9110222675";
+const phone_number = "89704 67154";
 const email = "";
-const whatsapp_number = "9110222675";
-const company_name = "Kerala Future Guide";
-const person_name = "Pandith Madhavan Guruji";
+const whatsapp_number = "89704 67154";
+const company_name = "Shivshakthi Consulting";
+const person_name = "Shivshakthi Consulting";
 const address = "";
-const website_url = "https://www.keralafutureguide.in";
+const website_url = "https://shivshakthiconsulting.in";
 
 export {
   phone_number,

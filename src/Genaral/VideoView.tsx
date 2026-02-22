@@ -2,44 +2,49 @@ import { phone_number, whatsapp_number, company_name } from "./secrete";
 
 const ImageView = () => {
   return (
-    <div className="relative w-full h-[450px] overflow-hidden rounded-none mb-2">
+    <div className="relative w-full h-[480px] overflow-hidden mb-2">
       {/* Image Background */}
       <img
-        src="https://i.pinimg.com/736x/b6/60/33/b66033ad954c9e1efbe66fe079e4ab75.jpg" // 👉 mee image path ikkada
-        alt="Astrology Banner"
-        className="w-full h-full object-cover"
+        src="https://i.pinimg.com/736x/b6/a8/67/b6a867af8c53ae48e3d7db900439816e.jpg"
+        alt="Banner"
+        className="w-full h-full object-cover scale-105"
       />
 
-      {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-black/60"></div>
+      {/* Heavy Dark Overlay */}
+      <div className="absolute inset-0 bg-black/90"></div>
 
-      {/* Text & Buttons Overlay */}
+      {/* Content */}
       <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-6 z-10">
-        <h1 className="text-3xl md:text-5xl font-extrabold text-white drop-shadow-lg montserrat">
+        {/* Heading */}
+        <h1 className="text-3xl md:text-6xl font-black text-white tracking-wide font-poppins">
           {company_name}
         </h1>
 
-        <p className="mt-4 text-white text-sm md:text-lg open-sans leading-snug max-w-xs md:max-w-lg">
-          Renowned astrologer providing personalized astrology services for
-          accurate guidance, spiritual growth, and life solutions. Trusted
-          worldwide.
+        {/* Divider */}
+        <div className="w-20 h-[3px] bg-gradient-to-r from-red-600 to-purple-600 my-5"></div>
+
+        {/* Description */}
+        <p className="text-gray-300 text-sm md:text-lg font-inter leading-relaxed max-w-md md:max-w-xl">
+          Professional guidance focused on clarity, understanding, and informed
+          decision-making. Built on trust, integrity, and confidentiality.
         </p>
 
-        <div className="mt-6 flex gap-4">
+        {/* Buttons */}
+        <div className="mt-8 flex gap-5">
           <a
             href={`tel:${phone_number}`}
-            className="bg-gradient-to-r from-red-500 via-pink-500 to-purple-500 text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:scale-105 transition-transform duration-300"
+            className="bg-red-700 hover:bg-red-800 text-white px-7 py-3 rounded-md font-semibold font-inter tracking-wide shadow-xl transition-all duration-300"
           >
-            Call Now
+            CALL NOW
           </a>
 
           <a
             href={`https://wa.me/${whatsapp_number}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-gradient-to-r from-green-500 via-teal-500 to-cyan-500 text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:scale-105 transition-transform duration-300"
+            className="bg-green-700 hover:bg-green-800 text-white px-7 py-3 rounded-md font-semibold font-inter tracking-wide shadow-xl transition-all duration-300"
           >
-            Chat Now
+            CHAT NOW
           </a>
         </div>
       </div>

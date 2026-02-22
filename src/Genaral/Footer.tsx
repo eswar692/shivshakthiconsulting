@@ -30,7 +30,7 @@ export default function Footer() {
   return (
     <motion.footer
       className="relative mt-2 w-full overflow-hidden text-white
-  bg-gradient-to-br from-fuchsia-800 via-purple-900 to-indigo-950 pt-20"
+  bg-gradient-to-br from-fuchsia-800 via-purple-900 to-indigo-950 pt-20 z-[9999]"
     >
       {/* Strong Color Blobs */}
       <div className="absolute -top-24 -left-24 w-[450px] h-[450px] bg-pink-600 rounded-full blur-3xl opacity-40"></div>
@@ -73,16 +73,16 @@ export default function Footer() {
           </p>
 
           <p className="text-sm mt-3 leading-relaxed text-white">
-            <b>No. 34, 7th Cross, Vijay Nagar</b>
+            <b>02, Vijay complex, shivapura,r</b>
             <br />
-            98/3 DC Road, Kuttiyappa Garden
+            4th cross, ramalayam street
             <br />
-            Bilekahalli, Bengaluru – 560076
+            Baragur, Hassan, 573225
             <br />
             Karnataka, India
             <br />
-            <a href="tel:9110222675" className="underline">
-              📞 +91 91102 22675
+            <a href={`tel:${phone_number}`} className="underline">
+              📞 +91 {phone_number}
             </a>
           </p>
 
@@ -129,36 +129,40 @@ export default function Footer() {
 
 const CopyRightAndContact = () => {
   return (
-    <div className=" bottom-0 left-0 right-0 bg-gradient-to-r from-pink-500 via-purple-600 to-indigo-800 py-5 shadow-inner">
-      <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
+    <footer className="w-full bg-gradient-to-r from-black via-zinc-950 to-neutral-950 border-t border-white/10">
+      <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center gap-4">
         {/* Left */}
-        <div className="text-center md:text-left flex flex-col md:flex-row gap-4 items-center">
-          <p className="font-montserrat text-sm text-gray-100">
-            Designed with ❤️ by
+        <div className="flex flex-col md:flex-row items-center gap-4 text-center md:text-left">
+          <p className="text-sm text-gray-400 font-inter tracking-wide">
+            Designed with care by
           </p>
+
           <a
             href="https://wa.me/918886921826?text=Hello%20Pro%20Daddy%20Agency"
-            className="transition transform hover:scale-110"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="transition-transform hover:scale-105"
           >
-            <button className="bg-yellow-400 text-black font-bold py-2 px-5 rounded-full shadow-lg hover:shadow-yellow-500/70 transition-all">
-              Eswar – Pro Daddy Agency
+            <button className="bg-red-800 hover:bg-red-900 text-white text-sm font-semibold px-5 py-2 rounded tracking-wide shadow-lg transition-all duration-300">
+              Eswar · +91 88869 21826
             </button>
           </a>
         </div>
 
         {/* Right */}
-        <div className="text-center md:text-right text-sm text-gray-200">
+        <div className="text-sm text-gray-400 text-center md:text-right font-inter tracking-wide">
           © {new Date().getFullYear()}{" "}
           <a
             href={website_url}
             target="_blank"
-            className="font-semibold hover:text-yellow-300 transition"
+            rel="noopener noreferrer"
+            className="text-white font-semibold hover:text-red-400 transition-colors"
           >
             {company_name}
-          </a>{" "}
-          – All Rights Reserved.
+          </a>
+          . All rights reserved.
         </div>
       </div>
-    </div>
+    </footer>
   );
 };

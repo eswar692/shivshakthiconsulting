@@ -38,14 +38,16 @@ export default function Contact() {
           </p>
 
           <p className="open-sans text-xs md:text-sm text mt-1 max-w-[340px] leading-relaxed">
-            No 34, 7th Cross, Vijay Nagar, 98/3 DC Road,
+            02, Vijay complex, shivapura,
             <br />
-            Kutti Yappa Garden, Bilekahalli,
+            4th cross, ramalayam street
             <br />
-            Bengaluru (Urban) – 560076, Karnataka
+            Baragur Hassan, 573225
+            <br />
+            Karnataka, India
             <br />
             <span className="text-purple-400 font-semibold">
-              Phone: 91102 22675
+              📞 +91 {phone_number}
             </span>
           </p>
 
