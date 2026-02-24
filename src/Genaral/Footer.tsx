@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { ChevronRight, Phone, MessageCircle } from "lucide-react";
 import useInViewOnce from "./InView";
 import {
+  address,
   company_name,
   person_name,
   phone_number,
@@ -14,22 +15,14 @@ export default function Footer() {
 
   const services = [
     "Love Expert",
-    "Astrology Specialist",
     "Love Problem Expert",
     "Love Marriage Approval",
     "Quick Rishta Marriage",
   ];
 
-  const whyChoose = [
-    "Relationship Problem",
-    "Husband-Wife Dispute Specialist",
-    "Happy Clients",
-    "Online Astrologer",
-  ];
-
   return (
     <motion.footer
-      className="relative mt-2 w-full overflow-hidden text-white
+      className="roboto relative mt-2 w-full overflow-hidden text-white
   bg-gradient-to-br from-fuchsia-800 via-purple-900 to-indigo-950 pt-20 z-[9999]"
     >
       {/* Strong Color Blobs */}
@@ -62,33 +55,35 @@ export default function Footer() {
             Contact Us
           </h2>
 
-          <p className="flex items-center gap-2 text-white">
-            <Phone className="w-5 h-5 text-white" />
-            {phone_number}
-          </p>
+          <div className="text-sm">
+            <p className="flex items-center gap-2 text-white">
+              <Phone className="w-5 h-5 text-white" />
+              {phone_number}
+            </p>
 
-          <p className="flex items-center gap-2 text-white mt-2">
-            <MessageCircle className="w-5 h-5 text-white" />
-            {whatsapp_number}
-          </p>
+            <p className="flex items-center gap-2 text-white mt-2">
+              <MessageCircle className="w-5 h-5 text-white" />
+              {whatsapp_number}
+            </p>
 
-          <p className="text-sm mt-3 leading-relaxed text-white">
-            <b>02, Vijay complex, shivapura,r</b>
-            <br />
-            4th cross, ramalayam street
-            <br />
-            Baragur, Hassan, 573225
-            <br />
-            Karnataka, India
-            <br />
-            <a href={`tel:${phone_number}`} className="underline">
-              📞 +91 {phone_number}
-            </a>
-          </p>
+            <p className="text-xl mt-3 leading-relaxed text-white">
+              <b>{address.line1}</b>
+              <br />
+              {address.line2}
+              <br />
+              {address.city}, {address.district}, {address.pincode}
+              <br />
+              {address.state}, {address.country}
+              <br />
+              <a href={`tel:${phone_number}`} className="underline">
+                📞 +91 {phone_number}
+              </a>
+            </p>
 
-          <p className="mt-3 font-semibold text-white">
-            Best Astro Guidance 🌟
-          </p>
+            <p className="mt-3 font-semibold text-white">
+              Best Spiritual Guidance 🌟
+            </p>
+          </div>
         </div>
 
         {/* SERVICES */}
@@ -106,18 +101,33 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* WHY CHOOSE */}
+        {/* POLICY */}
         <div className="rounded-3xl p-6 bg-emerald-950 border border-white/20">
           <h2 className="text-2xl font-bold montserrat text-white mb-3">
-            Why Choose Us?
+            Policy page and more
           </h2>
-          <ul className="space-y-2 text-sm">
-            {whyChoose.map((item, i) => (
-              <li key={i} className="flex items-center gap-2 text-white">
-                <ChevronRight className="w-4 h-4 text-white" />
-                {item}
-              </li>
-            ))}
+          <ul className="space-y-2 text-xl">
+            <li className="text-white">
+              <a href="/terms" className="hover:text-red-400 transition-colors">
+                Terms & Conditions
+              </a>
+            </li>
+            <li className="text-white">
+              <a
+                href="/privacy-policy"
+                className="hover:text-red-400 transition-colors"
+              >
+                Privacy Policy
+              </a>
+            </li>
+            <li>
+              <a
+                href="/contact"
+                className="hover:text-red-400 transition-colors"
+              >
+                Contact Page
+              </a>
+            </li>
           </ul>
         </div>
       </motion.div>

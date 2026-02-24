@@ -1,6 +1,11 @@
 import { Mail, Phone } from "lucide-react"; // icons
 import Form from "../Genaral/Form";
-import { phone_number, whatsapp_number } from "../Genaral/secrete";
+import {
+  address,
+  company_name,
+  phone_number,
+  whatsapp_number,
+} from "../Genaral/secrete";
 
 export default function Contact() {
   return (
@@ -38,13 +43,15 @@ export default function Contact() {
           </p>
 
           <p className="open-sans text-xs md:text-sm text mt-1 max-w-[340px] leading-relaxed">
-            02, Vijay complex, shivapura,
+            <b className="text-violet-700">{company_name}</b>
             <br />
-            4th cross, ramalayam street
+            {address.line1}
             <br />
-            Baragur Hassan, 573225
+            {address.line2}
             <br />
-            Karnataka, India
+            {address.city}, {address.district}, {address.pincode}
+            <br />
+            {address.state}, {address.country}
             <br />
             <span className="text-purple-400 font-semibold">
               📞 +91 {phone_number}

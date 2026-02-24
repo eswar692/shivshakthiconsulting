@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { company_name } from "../Genaral/secrete";
 
 // PrivacyPolicy.tsx
@@ -10,18 +10,7 @@ type Section = {
   content: string;
 };
 
-interface Props {
-  companyName?: string;
-  effectiveDate?: string;
-  showAccept?: boolean;
-  onAccept?: () => void;
-}
-
-const PrivacyPolicy: React.FC<Props> = ({
-  effectiveDate = "January 1, 2025",
-  showAccept = false,
-  onAccept = () => {},
-}) => {
+const PrivacyPolicy = () => {
   const sections: Section[] = [
     {
       id: "intro",
@@ -64,8 +53,8 @@ const PrivacyPolicy: React.FC<Props> = ({
   const [open, setOpen] = useState<Record<string, boolean>>(() =>
     sections.reduce(
       (acc, s) => ({ ...acc, [s.id]: true }),
-      {} as Record<string, boolean>
-    )
+      {} as Record<string, boolean>,
+    ),
   );
 
   function toggle(id: string) {
@@ -79,7 +68,7 @@ const PrivacyPolicy: React.FC<Props> = ({
           {company_name} — Privacy Policy
         </h1>
         <p className="text-sm text-slate-500 mt-1">
-          Effective date: {effectiveDate}
+          Effective date: {new Date().toLocaleDateString()}
         </p>
       </header>
 
@@ -110,7 +99,7 @@ const PrivacyPolicy: React.FC<Props> = ({
 
       <footer className="mt-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
         <div className="text-sm text-slate-500">
-          <p>Last updated: {effectiveDate}</p>
+          <p>Last updated: {new Date().toLocaleDateString()}</p>
         </div>
 
         <div className="flex items-center gap-3">
@@ -120,15 +109,6 @@ const PrivacyPolicy: React.FC<Props> = ({
           >
             Print / Save as PDF
           </button>
-
-          {showAccept && (
-            <button
-              onClick={onAccept}
-              className="px-4 py-2 rounded-xl bg-slate-900 text-white hover:opacity-95"
-            >
-              Accept
-            </button>
-          )}
         </div>
       </footer>
 

@@ -1,7 +1,12 @@
 import { MenuIcon, MessageCircle, Phone, X } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { company_name, phone_number, whatsapp_number } from "./secrete";
+import {
+  address,
+  company_name,
+  phone_number,
+  whatsapp_number,
+} from "./secrete";
 
 const Header = () => {
   return (
@@ -49,24 +54,24 @@ const Logo = () => (
         {/* Text */}
         <div className="flex flex-col">
           <h1
-            className="montserrat font-extrabold text-xl md:text-3xl 
+            className="montserrat font-extrabold text-2xl md:text-3xl 
             text-white tracking-wide"
           >
             {company_name}
           </h1>
 
           <p className="text-xs md:text-sm text-yellow-300 italic">
-            Since 1976
+            Since 1978
           </p>
 
-          <p className="text-sm md:text-sm text-gray-200 mt-2 leading-relaxed max-w-[360px]">
-            <b>02, Vijay complex, shivapura, 4th cross,</b>
+          <p className="text-xl poppins md:text-sm text-gray-200 mt-2 leading-relaxed max-w-[360px]">
+            <b>{address.line1}</b>
             <br />
-            ramalayam street,
+            {address.line2}
             <br />
-            Baragur Hassan ,573225
+            {address.city}, {address.district}, {address.pincode}
             <br />
-            Karnataka
+            {address.state}, {address.country}
             <br />
             <span className="text-yellow-400 font-semibold">
               📞 +91 {phone_number}

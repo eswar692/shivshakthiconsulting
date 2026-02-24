@@ -6,6 +6,8 @@ import Contact from "./pages/Contact";
 import Header from "./Genaral/Header";
 import Footer from "./Genaral/Footer";
 import CallToAction from "./Genaral/CallToAction";
+import TermsAndConditions from "./pages/terms";
+import PrivacyPolicy from "./pages/Privacy-policy";
 
 const App = () => {
   return (
@@ -16,6 +18,8 @@ const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/terms" element={<TermsAndConditions />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="*" element={<Home />} />
       </Routes>
 

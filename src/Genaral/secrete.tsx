@@ -3,7 +3,16 @@ const email = "";
 const whatsapp_number = "89704 67154";
 const company_name = "Shivshakthi Consulting";
 const person_name = "Shivshakthi Consulting";
-const address = "";
+const address = {
+  line1: "02, Vijay complex, shivapura,",
+  line2: "4th cross, ramalayam street",
+  city: "Baragur",
+  district: "Hassan",
+
+  state: "Karnataka",
+  pincode: "573225",
+  country: "India",
+};
 const website_url = "https://shivshakthiconsulting.in";
 
 export {
