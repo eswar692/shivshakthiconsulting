@@ -1,6 +1,6 @@
-const phone_number = "9353795613";
+const phone_number = "8618817217";
 const email = "";
-const whatsapp_number = "9353795613";
+const whatsapp_number = "8618817217";
 const company_name = "Shivshakthi Consulting";
 const person_name = "Shivshakthi Consulting";
 const address = {
