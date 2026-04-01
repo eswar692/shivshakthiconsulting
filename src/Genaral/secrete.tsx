@@ -3,22 +3,22 @@ const email = "";
 const whatsapp_number = "";
 const company_name = "Shivshakthi Consulting";
 const person_name = "Shivshakthi Consulting";
-// const address = {
-//   line1: "02, Vijay complex, shivapura,",
-//   line2: "4th cross, ramalayam street",
-//   city: "Baragur",
-//   district: "Hassan",
+const address = {
+  line1: ",",
+  line2: "",
+  city: "",
+  district: "",
 
-//   state: "Karnataka",
-//   pincode: "573225",
-//   country: "India",
-// };
+  state: "",
+  pincode: "",
+  country: "",
+};
 const website_url = "https://shivshakthiconsulting.in";
 
 export {
   phone_number,
   email,
-  // address,
+  address,
   whatsapp_number,
   company_name,
   person_name,
