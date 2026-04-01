@@ -1,12 +1,7 @@
 import { MenuIcon, MessageCircle, Phone, X } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import {
-  address,
-  company_name,
-  phone_number,
-  whatsapp_number,
-} from "./secrete";
+import { company_name, phone_number, whatsapp_number } from "./secrete";
 
 const Header = () => {
   return (
@@ -64,7 +59,7 @@ const Logo = () => (
             Since 1978
           </p>
 
-          <p className="text-xl poppins md:text-sm text-gray-200 mt-2 leading-relaxed max-w-[360px]">
+          {/* <p className="text-xl poppins md:text-sm text-gray-200 mt-2 leading-relaxed max-w-[360px]">
             <b>{address.line1}</b>
             <br />
             {address.line2}
@@ -76,7 +71,7 @@ const Logo = () => (
             <span className="text-yellow-400 font-semibold">
               📞 +91 {phone_number}
             </span>
-          </p>
+          </p> */}
         </div>
       </div>
 

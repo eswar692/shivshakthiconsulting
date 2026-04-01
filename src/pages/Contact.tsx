@@ -1,8 +1,8 @@
 import { Mail, Phone } from "lucide-react"; // icons
 import Form from "../Genaral/Form";
 import {
-  address,
-  company_name,
+  // address,
+  // company_name,
   phone_number,
   whatsapp_number,
 } from "../Genaral/secrete";
@@ -42,7 +42,7 @@ export default function Contact() {
             spiritual guidance is here to help.
           </p>
 
-          <p className="open-sans text-xs md:text-sm text mt-1 max-w-[340px] leading-relaxed">
+          {/* <p className="open-sans text-xs md:text-sm text mt-1 max-w-[340px] leading-relaxed">
             <b className="text-violet-700">{company_name}</b>
             <br />
             {address.line1}
@@ -56,7 +56,7 @@ export default function Contact() {
             <span className="text-purple-400 font-semibold">
               📞 +91 {phone_number}
             </span>
-          </p>
+          </p> */}
 
           <br />
           <div className="space-y-5 text-lg text-gray-800">

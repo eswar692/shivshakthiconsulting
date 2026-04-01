@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { ChevronRight, Phone, MessageCircle } from "lucide-react";
 import useInViewOnce from "./InView";
 import {
-  address,
   company_name,
   person_name,
   phone_number,
@@ -66,7 +65,7 @@ export default function Footer() {
               {whatsapp_number}
             </p>
 
-            <p className="text-xl mt-3 leading-relaxed text-white">
+            {/* <p className="text-xl mt-3 leading-relaxed text-white">
               <b>{address.line1}</b>
               <br />
               {address.line2}
@@ -78,7 +77,7 @@ export default function Footer() {
               <a href={`tel:${phone_number}`} className="underline">
                 📞 +91 {phone_number}
               </a>
-            </p>
+            </p> */}
 
             <p className="mt-3 font-semibold text-white">
               Best Spiritual Guidance 🌟
