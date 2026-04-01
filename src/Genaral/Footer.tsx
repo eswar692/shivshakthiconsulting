@@ -140,7 +140,7 @@ const CopyRightAndContact = () => {
   return (
     <footer className="w-full bg-gradient-to-r from-black via-zinc-950 to-neutral-950 border-t border-white/10">
       <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center gap-4">
-        {/* Left */}
+        {/* Left
         <div className="flex flex-col md:flex-row items-center gap-4 text-center md:text-left">
           <p className="text-sm text-gray-400 font-inter tracking-wide">
             Designed with care by
@@ -156,7 +156,7 @@ const CopyRightAndContact = () => {
               Eswar · +91 88869 21826
             </button>
           </a>
-        </div>
+        </div> */}
 
         {/* Right */}
         <div className="text-sm text-gray-400 text-center md:text-right font-inter tracking-wide">
